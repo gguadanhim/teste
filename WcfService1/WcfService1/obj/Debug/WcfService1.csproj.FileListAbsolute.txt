@@ -1,0 +1,5 @@
+D:\Git\webservice\teste\WcfService1\WcfService1\bin\WcfService1.dll
+D:\Git\webservice\teste\WcfService1\WcfService1\bin\WcfService1.pdb
+D:\Git\webservice\teste\WcfService1\WcfService1\obj\Debug\WcfService1.csprojResolveAssemblyReference.cache
+D:\Git\webservice\teste\WcfService1\WcfService1\obj\Debug\WcfService1.dll
+D:\Git\webservice\teste\WcfService1\WcfService1\obj\Debug\WcfService1.pdb

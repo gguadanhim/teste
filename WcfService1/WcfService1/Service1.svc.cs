@@ -5,7 +5,8 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
-
+using System.Net;
+using System.Net.Mail;
 
 
 
@@ -17,6 +18,7 @@ namespace WcfService1
     {
         public string GetData(int value)
         {
+            this.SendTextMessage("teste", "Mesagem de teste", 554896374614);
             return string.Format("You entered: {0}", value);
         }
 
@@ -32,6 +34,37 @@ namespace WcfService1
                 composite.StringValue += "Suffix";
             }
             return composite;
+        }
+
+
+ 
+        public void SendTextMessage(string subject, string message, long telephoneNumer)
+        {
+            // login details for gmail acct.
+            const string sender = "gguadanhim@gmail.com";
+            const string password = "stadium2008";
+ 
+            // find the carriers sms gateway for the recipent. txt.att.net is for AT&T customers.
+            string carrierGateway = "txt.att.net";
+ 
+            // this is the recipents number @ carrierGateway that gmail use to deliver message.
+            string recipent = string.Concat(new object[]{
+            telephoneNumer,
+            '@',
+            carrierGateway
+            });
+ 
+            // form the text message and send
+            using (MailMessage textMessage = new MailMessage(sender, recipent, subject, message))
+            {
+                using (SmtpClient textMessageClient = new SmtpClient("smtp.gmail.com", 587))
+                {
+                    textMessageClient.UseDefaultCredentials = false;
+                    textMessageClient.EnableSsl = true;
+                    textMessageClient.Credentials = new NetworkCredential(sender, password);
+                    textMessageClient.Send(textMessage);
+                }
+            }
         }
     }
 }

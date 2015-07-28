@@ -2,7 +2,6 @@
   "webroot": "wwwroot",
   "userSecretsId": "aspnet5-WebApplication1-25d8ab49-bede-4445-a2b9-b91fc1f01179",
   "version": "1.0.0-*",
- 
 
   "dependencies": {
     "EntityFramework.SqlServer": "7.0.0-beta5",

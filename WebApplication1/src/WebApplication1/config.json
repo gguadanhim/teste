@@ -4,7 +4,7 @@
   },
   "Data": {
     "DefaultConnection": {
-      "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=aspnet5-WebApplication1-25d8ab49-bede-4445-a2b9-b91fc1f01179;Trusted_Connection=True;MultipleActiveResultSets=true"
+      "ConnectionString": "Server=0a33e0ca-bc47-434f-b3de-a4e3001381d9.sqlserver.sequelizer.com;Database=db0a33e0cabc47434fb3dea4e3001381d9;User ID=paearciysjocducy;Password=vXVsAn8Aie5i7qEiErSguZYyBx4pyvCoQ7NG3fQxcRZLijbzZyHYe7KD7wXdsRbV;Trusted_Connection=True;MultipleActiveResultSets=true"
     }
   }
 }
